@@ -1,85 +1,99 @@
-# xtream AI Challenge
+# xtream-kedro
 
-## Ready Player 1? 🚀
+## Overview
 
-Hey there! If you're reading this, you've already aced our first screening. Awesome job! 👏👏👏
+This is your new Kedro project with Kedro-Viz setup, which was generated using `kedro 0.19.6`.
 
-Welcome to the next level of your journey towards the [xtream](https://xtreamers.io) AI squad. Here's your cool new assignment.
+Take a look at the [Kedro documentation](https://docs.kedro.org) to get started.
 
-Take your time – you've got **10 days** to show us your magic, starting from when you get this. No rush, work at your pace. If you need more time, just let us know. We're here to help you succeed. 🤝
+## Rules and guidelines
 
-### What You Need to Do
+In order to get the best out of the template:
 
-Think of this as a real-world project. Fork this repo and treat it as if you're working on something big! When the deadline hits, we'll be excited to check out your work. No need to tell us you're done – we'll know. 😎
+* Don't remove any lines from the `.gitignore` file we provide
+* Make sure your results can be reproduced by following a [data engineering convention](https://docs.kedro.org/en/stable/faq/faq.html#what-is-data-engineering-convention)
+* Don't commit data to your repository
+* Don't commit any credentials or your local configuration to your repository. Keep all your credentials and local configuration in `conf/local/`
 
-🚨 **Heads Up**: You might think the tasks are a bit open-ended or the instructions aren't super detailed. That’s intentional! We want to see how you creatively make the most out of the data and craft your own effective solutions.
+## How to install dependencies
 
-🚨 **Remember**: At the end of this doc, there's a "How to run" section left blank just for you. Please fill it in with instructions on how to run your code.
+Declare any dependencies in `requirements.txt` for `pip` installation.
 
-### How We'll Evaluate Your Work
+To install them, run:
 
-We'll be looking at a bunch of things to see how awesome your work is, like:
+```
+pip install -r requirements.txt
+```
 
-* Your approach and method
-* Your understanding of the data
-* The clarity and completeness of your findings
-* How you use your tools (like git and Python packages)
-* The neatness of your code
-* The readability and maintainability of your code
-* The clarity of your documentation
+## How to run your Kedro pipeline
 
-🚨 **Keep This in Mind**: This isn't about building the fanciest model: we're more interested in your process and thinking.
+You can run your Kedro project with:
 
----
+```
+kedro run
+```
 
-### Diamonds
+## How to test your Kedro project
 
-**Problem type**: Regression
+Have a look at the files `src/tests/test_run.py` and `src/tests/pipelines/data_science/test_pipeline.py` for instructions on how to write your tests. Run the tests as follows:
 
-**Dataset description**: [Diamonds Readme](./datasets/diamonds/README.md)
+```
+pytest
+```
 
-Meet Don Francesco, the mystery-shrouded, fabulously wealthy owner of a jewelry empire. 
+To configure the coverage threshold, look at the `.coveragerc` file.
 
-He's got an impressive collection of 5000 diamonds and a temperament to match - so let's keep him smiling, shall we? 
-In our dataset, you'll find all the glittery details of these gems, from size to sparkle, along with their values 
-appraised by an expert. You can assume that the expert's valuations are in line with the real market value of the stones.
+## Project dependencies
 
-#### Challenge 1
+To see and update the dependency requirements for your project use `requirements.txt`. Install the project requirements with `pip install -r requirements.txt`.
 
-Plot twist! The expert who priced these gems has now vanished. 
-Francesco needs you to be the new diamond evaluator. 
-He's looking for a **model that predicts a gem's worth based on its characteristics**. 
-And, because Francesco's clientele is as demanding as he is, he wants the why behind every price tag. 
+[Further information about project dependencies](https://docs.kedro.org/en/stable/kedro_project_setup/dependencies.html#project-specific-dependencies)
 
-Create a Jupyter notebook where you develop and evaluate your model.
+## How to work with Kedro and notebooks
 
-#### Challenge 2
+> Note: Using `kedro jupyter` or `kedro ipython` to run your notebook provides these variables in scope: `catalog`, `context`, `pipelines` and `session`.
+>
+> Jupyter, JupyterLab, and IPython are already included in the project requirements by default, so once you have run `pip install -r requirements.txt` you will not need to take any extra steps before you use them.
 
-Good news! Francesco is impressed with the performance of your model. 
-Now, he's ready to hire a new expert and expand his diamond database. 
+### Jupyter
+To use Jupyter notebooks in your Kedro project, you need to install Jupyter:
 
-**Develop an automated pipeline** that trains your model with fresh data, 
-keeping it as sharp as the diamonds it assesses.
+```
+pip install jupyter
+```
 
-#### Challenge 3
+After installing Jupyter, you can start a local notebook server:
 
-Finally, Francesco wants to bring your brilliance to his business's fingertips. 
+```
+kedro jupyter notebook
+```
 
-**Build a REST API** to integrate your model into a web app, 
-making it a cinch for his team to use. 
-Keep it developer-friendly – after all, not everyone speaks 'data scientist'!
+### JupyterLab
+To use JupyterLab, you need to install it:
 
-#### Challenge 4
+```
+pip install jupyterlab
+```
 
-Your model is doing great, and Francesco wants to make even more money.
+You can also start JupyterLab:
 
-The next step is exposing the model to other businesses, but this calls for an upgrade in the training and serving infrastructure.
-Using your favorite cloud provider, either AWS, GCP, or Azure, design cloud-based training and serving pipelines.
-You should not implement the solution, but you should provide a **detailed explanation** of the architecture and the services you would use, motivating your choices.
+```
+kedro jupyter lab
+```
 
-So, ready to add some sparkle to this challenge? Let's make these diamonds shine! 🌟💎✨
+### IPython
+And if you want to run an IPython session:
 
----
+```
+kedro ipython
+```
 
-## How to run
-Please fill this section as part of the assignment.
+### How to ignore notebook output cells in `git`
+To automatically strip out all output cell contents before committing to `git`, you can use tools like [`nbstripout`](https://github.com/kynan/nbstripout). For example, you can add a hook in `.git/config` with `nbstripout --install`. This will run `nbstripout` before anything is committed to `git`.
+
+> *Note:* Your output cells will be retained locally.
+
+[Further information about using notebooks for experiments within Kedro projects](https://docs.kedro.org/en/develop/notebooks_and_ipython/kedro_and_notebooks.html).
+## Package your Kedro project
+
+[Further information about building project documentation and packaging your project](https://docs.kedro.org/en/stable/tutorial/package_a_project.html).
