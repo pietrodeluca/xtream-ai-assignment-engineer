@@ -1,0 +1,15 @@
+optim_type: adamw
+lr_choice: None
+lr_schedule: polynomial_decay
+lr: 0.0001
+lr_decay: 0.9
+end_lr: 0
+lr_mult: 1
+weight_decay: 1.0e-05
+warmup_steps: 0.0
+validation_metric_name: root_mean_squared_error
+custom_metric_func: null
+efficient_finetune: null
+mixup_off_epoch: 5
+skip_final_val: false
+track_grad_norm: -1

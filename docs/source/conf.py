@@ -2,7 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
+<<<<<<< HEAD
 # xtream_ai_assignment documentation build
+=======
+# xtream_kedro documentation build
+>>>>>>> automl-test
 # configuration file, created by sphinx-quickstart.
 #
 # This file is execfile()d with the current directory set to its
@@ -21,11 +25,19 @@
 import re
 
 from kedro.framework.cli.utils import find_stylesheets
+<<<<<<< HEAD
 from xtream_ai_assignment import __version__ as release
 
 # -- Project information -----------------------------------------------------
 
 project = "xtream_ai_assignment"
+=======
+from xtream_kedro import __version__ as release
+
+# -- Project information -----------------------------------------------------
+
+project = "xtream_kedro"
+>>>>>>> automl-test
 author = "Kedro"
 
 # The short X.Y version.
@@ -121,7 +133,11 @@ html_show_copyright = False
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
+<<<<<<< HEAD
 htmlhelp_basename = "xtream_ai_assignmentdoc"
+=======
+htmlhelp_basename = "xtream_kedrodoc"
+>>>>>>> automl-test
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -149,8 +165,13 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
+<<<<<<< HEAD
         "xtream_ai_assignment.tex",
         "xtream_ai_assignment Documentation",
+=======
+        "xtream_kedro.tex",
+        "xtream_kedro Documentation",
+>>>>>>> automl-test
         "Kedro",
         "manual",
     )
@@ -163,8 +184,13 @@ latex_documents = [
 man_pages = [
     (
         master_doc,
+<<<<<<< HEAD
         "xtream_ai_assignment",
         "xtream_ai_assignment Documentation",
+=======
+        "xtream_kedro",
+        "xtream_kedro Documentation",
+>>>>>>> automl-test
         [author],
         1,
     )
@@ -178,11 +204,19 @@ man_pages = [
 texinfo_documents = [
     (
         master_doc,
+<<<<<<< HEAD
         "xtream_ai_assignment",
         "xtream_ai_assignment Documentation",
         author,
         "xtream_ai_assignment",
         "Project xtream_ai_assignment codebase.",
+=======
+        "xtream_kedro",
+        "xtream_kedro Documentation",
+        author,
+        "xtream_kedro",
+        "Project xtream_kedro codebase.",
+>>>>>>> automl-test
         "Data-Science",
     )
 ]
