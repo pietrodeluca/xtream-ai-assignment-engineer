@@ -41,3 +41,15 @@ attr = "xtream_kedro.__version__"
 [tool.setuptools.packages.find]
 where = [ "src",]
 namespaces = false
+
+[tool.poetry]
+name = "xtream-ai-assignment-engineer"
+version = "0.1.0"
+description = "xtream challenge for ML engineering"
+authors = ["Pietro De Luca <info@pietrodeluca.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+autogluon = "^1.1.0"
+kedro = "^0.19.6"
